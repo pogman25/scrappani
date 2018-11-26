@@ -1,11 +1,11 @@
 const Router = require('koa-router');
 const fs = require('fs');
+const views = require('koa-views');
 
 const router = new Router();
 
 router.get('*', async ctx => {
-	ctx.type = 'html';
-	ctx.body = fs.createReadStream('./src/views/index.html');
+	return ctx.render('index')
 });
 
 module.exports = router;
