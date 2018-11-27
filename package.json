@@ -4,7 +4,7 @@
   "description": "scrappani landing",
   "main": "index.js",
   "scripts": {
-    "prestart": "export ENV=production && node_modules/.bin/gulp build",
+    "postinstall": "export ENV=production && node_modules/.bin/gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node_modules/.bin/nodemon ./src/app.js",
     "dev": "export ENV=development && gulp dev"
