@@ -4,9 +4,10 @@
   "description": "scrappani landing",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules\\.bin\\gulp dev",
+    "prestart": "export ENV=production && node_modules/.bin/gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node_modules/.bin/nodemon ./src/app.js"
+    "start": "node_modules/.bin/nodemon ./src/app.js",
+    "dev": "export ENV=development && gulp dev"
   },
   "author": "pogman",
   "license": "ISC",
@@ -14,8 +15,26 @@
     "gulp": "^4.0.0",
     "koa": "^2.6.2",
     "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "koa-views": "^6.1.4",
     "nodemon": "^1.18.6",
     "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "del": "^3.0.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-if": "^2.0.2",
+    "gulp-image": "^4.4.0",
+    "gulp-nodemon": "^2.4.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "node-sass": "^4.10.0",
+    "postcss-preset-env": "^6.4.0",
+    "webpack-stream": "^5.1.1"
   }
 }
