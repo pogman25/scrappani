@@ -53,7 +53,7 @@ gulp.task('fonts', function() {
 
 gulp.task('images', function() {
 	return gulp
-		.src('src/assets/images/**/*.*')
+		.src(['src/assets/images/**/*.*', 'src/assets/icons/**/*.*'])
 		.pipe(cache(image()))
 		.pipe(gulp.dest('src/public/images'));
 });

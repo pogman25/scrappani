@@ -1,3 +1,6 @@
-header
-    .top
-        p узкая полосочка с контактными данными
+header.header
+    .header__contacts
+        a(href="tel:"+phone)
+            i.header__whatsapp-icon
+            = phone
+        a(href="mailto:"+email)= email

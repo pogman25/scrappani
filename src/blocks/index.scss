@@ -1,13 +1,15 @@
 @import './utils/variables.scss';
 @import './utils/normalize.scss';
+@import './i-header/i-header.scss';
 @import './l-home/l-home.scss';
 
 body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	position: relative;
 }
 
-footer {
+.footer {
 	margin-top: auto;
 }
