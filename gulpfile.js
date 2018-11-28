@@ -9,8 +9,7 @@ const del = require('del');
 const webpack = require('webpack-stream');
 const webpackConfig = require('./config/webpack.config');
 const nodemon = require('gulp-nodemon');
-
-console.log(process.env.ENV);
+const cache = require('gulp-cache');
 
 const isDevelopment = !process.env.ENV || process.env.ENV === 'development';
 
@@ -55,7 +54,7 @@ gulp.task('fonts', function() {
 gulp.task('images', function() {
 	return gulp
 		.src('src/assets/images/**/*.*')
-		.pipe(image())
+		.pipe(cache(image()))
 		.pipe(gulp.dest('src/public/images'));
 });
 
@@ -72,7 +71,7 @@ gulp.task(
 gulp.task('server', function(done) {
 	nodemon({
 		script: 'src/app.js',
-		ext: 'js pug scss',
+		ext: 'js pug css',
 		ignore: ['gulpfile.js', 'node_modules/'],
 		done: done,
 	});
