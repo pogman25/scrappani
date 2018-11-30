@@ -12,7 +12,7 @@ app.use(serve(__dirname + '/public'));
 
 // routes
 app
-	.use(views(__dirname + '/views', {extension: 'pug'}))
+	.use(views(__dirname + '/views', { extension: 'pug' }))
 	.use(indexRoutes.routes());
 
 // server
