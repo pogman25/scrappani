@@ -1,61 +1,11 @@
 const gulp = require('gulp');
-const sass = require('gulp-sass');
-const gulpIf = require('gulp-if');
-const sourcemaps = require('gulp-sourcemaps');
-const postcss = require('gulp-postcss');
-const postcssPresetEnv = require('postcss-preset-env');
-const image = require('gulp-image');
-const del = require('del');
-const webpack = require('webpack-stream');
-const webpackConfig = require('./config/webpack.config');
+const hub = require('gulp-hub');
 const nodemon = require('gulp-nodemon');
-const cache = require('gulp-cache');
 
-const isDevelopment = !process.env.ENV || process.env.ENV === 'development';
-
-gulp.task('clean', function() {
-	return del(['src/public/**/*']);
-});
-
-gulp.task('sass', function() {
-	return gulp
-		.src('src/blocks/index.scss')
-		.pipe(gulpIf(isDevelopment, sourcemaps.init()))
-		.pipe(
-			sass({
-				outputStyle: 'compressed',
-			})
-		)
-		.pipe(
-			gulpIf(
-				!isDevelopment,
-				postcss([
-					postcssPresetEnv({
-						browsers: ['last 2 versions', 'Firefox ESR', 'not ie < 11'],
-					}),
-				])
-			)
-		)
-		.pipe(gulpIf(isDevelopment, sourcemaps.write()))
-		.pipe(gulp.dest('src/public'));
-});
-
-gulp.task('js', function() {
-	return gulp
-		.src('src/blocks/index.js')
-		.pipe(webpack(webpackConfig(isDevelopment)))
-		.pipe(gulp.dest('src/public/js'));
-});
+hub(['./gulp-tasks/*.js']);
 
 gulp.task('fonts', function() {
 	return gulp.src('src/assets/fonts/**/*.*').pipe(gulp.dest('src/public/fonts'));
-});
-
-gulp.task('images', function() {
-	return gulp
-		.src(['src/assets/images/**/*.*', 'src/assets/icons/**/*.*'])
-		.pipe(cache(image()))
-		.pipe(gulp.dest('src/public/images'));
 });
 
 gulp.task('watch', function() {
