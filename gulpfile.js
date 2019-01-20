@@ -6,6 +6,7 @@ hub(['./gulp-tasks/*.js']);
 gulp.task('watch', function() {
 	gulp.watch('src/blocks/**/*.scss', gulp.series('sass'));
 	gulp.watch('src/assets/images/**/*.*', gulp.series('images'));
+	gulp.watch('src/views/**/*.*', gulp.series('pug'));
 });
 
 gulp.task(

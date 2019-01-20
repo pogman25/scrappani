@@ -17,11 +17,14 @@ $fontSizeXS: 12px;
 $fontSizeXXS: 11px;
 $fontSizeXXXS: 10px;
 
-
 // bg colors
 $white: #fff;
 $black: #000;
-$firstBG: #A07C48;
-$secondBG: #A05648;
-$thirdBG: #35754B;
-$attentionBG: #334E68;
+$firstBG: #a07c48;
+$secondBG: #a05648;
+$thirdBG: #35754b;
+$attentionBG: #334e68;
+
+$bgGradientLeft: rgba(241, 146, 29, 0.9);
+$bgGradientCenter: rgba(254, 93, 0, 0.6);
+$bgGradientRight: rgba(231, 46, 8, 0.9);
