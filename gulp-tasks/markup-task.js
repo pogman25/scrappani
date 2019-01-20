@@ -7,7 +7,13 @@ gulp.task('pug', function buildHTML() {
 		.src('src/views/home/index.pug')
 		.pipe(
 			pug({
-				// Your options in here.
+				data: {
+					title: 'Scrappani',
+					homeBannerTitle: 'Scrappani',
+					homeBannerSubtitle: 'Изделия ручной работы',
+					phone: '+7-960-477-789-4',
+					email: 'scrappani@yandex.ru',
+				},
 			})
 		)
 		.pipe(gulp.dest('src/public'));
