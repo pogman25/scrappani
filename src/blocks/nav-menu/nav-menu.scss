@@ -1,0 +1,13 @@
+.nav-menu {
+	width: 100%;
+}
+
+.nav-menu__list {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.nav-menu__item {
+    font-family: $fontFamilyThird;
+}

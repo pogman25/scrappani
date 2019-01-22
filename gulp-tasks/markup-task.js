@@ -10,7 +10,7 @@ gulp.task('pug', function buildHTML() {
 				data: {
 					title: 'Scrappani',
 					homeBannerTitle: 'Scrappani',
-					homeBannerSubtitle: 'Изделия ручной работы',
+					homeBannerSubtitle: 'Альбомы и блокноты',
 					phone: '+7-960-477-789-4',
 					email: 'scrappani@yandex.ru',
 				},

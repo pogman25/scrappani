@@ -1,139 +1,41 @@
 .title-banner {
-	width: 100%;
-	min-height: 100vh;
+	width: calc(100% - 40px);
+	max-width: 900px;
+	min-height: 400px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: relative;
-
-	&::before,
-	&::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
-
-	&::before {
-		background-color: #fff;
-		z-index: -2;
-	}
-
-	&::after {
-		background-image: linear-gradient(
-			155deg,
-			$bgGradientLeft 0%,
-			$bgGradientCenter 50%,
-			$bgGradientRight 100%
-		);
-		z-index: -1;
-	}
+	box-shadow: -4px 4px 6px 2px rgba(158, 158, 158, 0.25);
+	background-color: lighten($color: $orangeBG, $amount: 45%);
+	border-radius: 3px;
 }
 
-.title-banner__title-section {
-	height: 400px;
+.title-banner__text-section {
+	flex: 1 1 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	background-color: #fff;
-	background-image: url('images/home/note-paper.jpg');
-	background-size: cover;
-	border-radius: 3px;
-	box-shadow: -4px 4px 6px 2px rgba(158, 158, 158, 0.25);
-
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: url('images/home/green-paper.jpg');
-		background-size: cover;
-		z-index: -2;
-		animation-name: appearPink;
-		animation-delay: 1.5s;
-		animation-duration: 0.4s;
-		animation-fill-mode: forwards;
-	}
-	
-	&::after {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		background-image: url('images/home/yellow-paper.png');
-		background-size: cover;
-		z-index: -1;
-		animation-name: appearYellow;
-		animation-delay: 1.7s;
-		animation-duration: 0.35s;
-		animation-fill-mode: forwards;
-	}
 }
 
 .title-banner__title {
-	font-size: $fontSizeXXL;
-	font-style: italic;
-	letter-spacing: 0.33em;
-	margin: 0 0.67em 0.67em;
+	font-family: $fontFamilyMain;
+	font-size: $fontSizeExtraLarge;
+	font-weight: 400;
+	letter-spacing: 3px;
 }
 
 .title-banner__subtitle {
-	// font-family: $fontFamilyMain;
+	font-family: $fontFamilyMain;
+	font-weight: 400;
 	font-size: $fontSizeL;
 }
 
-.title-banner__leaf {
-	width: 350px;
-	height: 230px;
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	background-image: url('images/home/autumn-leaf.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 1;
-	opacity: 0;
-	animation-name: fadeIn;
-	animation-delay: 1s;
-	animation-duration: 1s;
-	animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn {
-	from {
-		opacity: 0;
-		transform: translate(-30%, 25%) rotateZ(-10deg);
-	}
-	to {
-		opacity: 1;
-		transform: translate(-40%, 35%) rotateZ(-30deg);
-	}
-}
-
-@keyframes appearPink {
-	from {
-		transform: scale(1) rotateZ(0deg);
-	}
-	
-	to {
-		transform: scale(1.025) rotateZ(-8deg);
-	}
-}
-
-@keyframes appearYellow {
-	from {
-		transform: scale(1) translate(0, 0) rotateZ(0);
-	}
-	to {
-		transform: scale(1.025) translate(14px, 10px) rotateZ(8deg);
-	}
+.title-banner__image-section {
+	flex: 1 1 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }

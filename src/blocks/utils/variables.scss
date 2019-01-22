@@ -1,10 +1,12 @@
 /* Variables */
 
 // font family
-$fontFamilyMain: 'Playfair Display', 'Times New Roman', serif;
-$fontFamilySecond: 'Cormorant Infant', 'Times New Roman', serif;
+$fontFamilyMain: 'Besom', 'Arial', sans-serif;
+$fontFamilySecond: 'Playfair Display', 'Times New Roman', serif;
+$fontFamilyThird: 'Cormorant Infant', 'Times New Roman', serif;
 
 // font sizes
+$fontSizeExtraLarge: 72px;
 $fontSizeXXL: 42px;
 $fontSizeXL: 34px;
 $fontSizeL: 28px;
@@ -20,7 +22,7 @@ $fontSizeXXXS: 10px;
 // bg colors
 $white: #fff;
 $black: #000;
-$firstBG: #a07c48;
+$orangeBG: #f1921d;
 $secondBG: #a05648;
 $thirdBG: #35754b;
 $attentionBG: #334e68;
