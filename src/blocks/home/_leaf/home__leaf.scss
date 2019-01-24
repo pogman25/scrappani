@@ -1,0 +1,33 @@
+.home__leaf {
+	position: absolute;
+    z-index: 4;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.home__leaf_left_top {
+	top: 0;
+	left: 0;
+    background-image: url('images/home/leaf_1.png');
+    width: 300px;
+    height: 300px;
+    transform: translate(-22%, -14%) rotateZ(30deg);
+}
+
+.home__leaf_right_bottom {
+	bottom: 0;
+	right: 50%;
+    background-image: url('./images/home/leaf_8.png');
+    width: 300px;
+    height: 300px;
+    transform: translate(30%, 20%) rotateZ(100deg);
+}
+
+.home__leaf_title {
+    background-image: url('images/home/leaf_4.png');
+    width: 300px;
+    height: 300px;
+    z-index: 0;
+    transform: translate(-10%, 30%) rotateZ(136deg);
+}

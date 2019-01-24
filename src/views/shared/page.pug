@@ -8,5 +8,9 @@ html(lang="en")
         link(rel="stylesheet", href="index.css")
         block scripts
     body
-        block content
+        main.page
+            .page__banner
+                block content
+                .page__menu
+                    include ../shared/menu.pug
         block footer-script

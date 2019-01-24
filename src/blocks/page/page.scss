@@ -1,0 +1,44 @@
+@import '../home/home.scss';
+@import '../main-logo/main-logo.scss';
+@import '../nav-menu/nav-menu.scss';
+
+.page {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	background-image: linear-gradient(
+		155deg,
+		$bgGradientLeft 0%,
+		$bgGradientCenter 50%,
+		$bgGradientRight 100%
+	);
+}
+.page__banner {
+	width: calc(100% - 50px);
+	max-width: 1200px;
+	min-width: 400px;
+	height: calc(100vh - 100px);
+	max-height: 700px;
+	min-height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: -4px 4px 6px 2px rgba(158, 158, 158, 0.25);
+	background-color: lighten($color: $orangeBG, $amount: 45%);
+	border-radius: 3px;
+	position: relative;
+}
+.page__menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 70px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: 600px;
+	display: flex;
+}

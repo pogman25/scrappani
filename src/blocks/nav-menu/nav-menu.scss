@@ -1,5 +1,6 @@
 .nav-menu {
     display: flex;
+    width: 100%;
 }
 
 .nav-menu__list {
@@ -10,5 +11,5 @@
 }
 
 .nav-menu__item {
-    font-family: $fontFamilyThird;
+    font-family: $fontFamilyMain;
 }
