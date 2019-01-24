@@ -11,7 +11,7 @@ gulp.task('watch', function() {
 
 gulp.task(
 	'build',
-	gulp.series('clean', gulp.parallel('fonts', 'js', gulp.parallel('images', 'sass')))
+	gulp.series('clean', gulp.parallel('fonts', 'js', 'fav-icon', gulp.parallel('images', 'sass')))
 );
 
 gulp.task(
@@ -19,7 +19,7 @@ gulp.task(
 	gulp.series(
 		'clean',
 		gulp.series(
-			gulp.parallel('images', 'sass', 'fonts'),
+			gulp.parallel('images', 'sass', 'fonts', 'fav-icon'),
 			gulp.parallel('watch', 'js', 'server')
 		)
 	)
@@ -30,7 +30,7 @@ gulp.task(
 	gulp.series(
 		'clean',
 		gulp.series(
-			gulp.parallel('images', 'sass', 'fonts'),
+			gulp.parallel('images', 'sass', 'fonts', 'fav-icon'),
 			gulp.parallel('watch', 'js', 'markup-server')
 		)
 	)
