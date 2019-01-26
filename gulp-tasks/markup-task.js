@@ -1,23 +1,13 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
-const pug = require('gulp-pug');
+const hub = require('gulp-hub');
 
-gulp.task('pug', function buildHTML() {
-	return gulp
-		.src('src/views/home/index.pug')
-		.pipe(
-			pug({
-				data: {
-					title: 'Scrappani',
-					homeBannerTitle: 'Scrappani',
-					homeBannerSubtitle: 'Альбомы и блокноты',
-					phone: '+7-960-477-789-4',
-					email: 'scrappani@yandex.ru',
-				},
-			})
-		)
-		.pipe(gulp.dest('src/public'));
-});
+hub(['./markup-tasks/*.js']);
+
+gulp.task(
+	'pug',
+	gulp.parallel('markup-home', 'markup-about', 'markup-works', 'markup-contacts')
+);
 
 // Static server
 gulp.task('browserSync', function() {
