@@ -7,7 +7,7 @@ gulp.task('markup-works', function() {
 		.pipe(
 			pug({
 				data: {
-					title: 'Scrappani',
+					title: 'Мои работы - Scrappani',
 					phone: '+7-960-477-789-4',
 					email: 'scrappani@yandex.ru',
 				},

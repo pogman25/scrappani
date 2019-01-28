@@ -7,7 +7,7 @@ gulp.task('markup-about', function() {
 		.pipe(
 			pug({
 				data: {
-					title: 'Scrappani',
+					title: 'Обо мне - Scrappani',
 					phone: '+7-960-477-789-4',
 					email: 'scrappani@yandex.ru',
 				},
